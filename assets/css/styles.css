@@ -420,21 +420,28 @@ section {
 
 
 /* ------------------------------------------------------------------- 
- * ## theme-specific typography classes
+ * ## Home intro title
  * ------------------------------------------------------------------- */
 
  .hero-column{
-    /* background-color: red; */
     margin-top: 190px;
     margin-left: 90px;
 
     /* Animation setup */
     opacity: 0;
     transform: translateX(-100%);
-    animation: slideInLeft 3.5s ease-out forwards;
+    animation: slideInLeft 5s ease-in-out forwards;
 }
 
 @keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    mid {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
     to {
         opacity: 1;
         transform: translateX(0);
@@ -531,7 +538,7 @@ section {
 
 
 /* --------------------------------------------------------------------
- * ## intro social
+ * ## intro social platforms
  * -------------------------------------------------------------------- */
  .intro-social {
     z-index: 1;
