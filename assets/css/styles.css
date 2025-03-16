@@ -300,8 +300,13 @@ section {
 }
 
 #about {
-    background: black;
+    background: rgb(68, 0, 255);
 }
+
+#skills {
+    background: rgb(255, 0, 0);
+}
+
 
 #projects {
     background: linear-gradient(135deg, #000428, #004e92);
@@ -311,6 +316,9 @@ section {
     background: linear-gradient(135deg, #232526, #414345);
 }
 
+#footer{
+    background: blueviolet;
+}
 
 /*====================================================
  HOME PAGE 
@@ -484,6 +492,10 @@ section {
     margin-top  : 0;
 }
 
+.text-huge-title span{
+    color: #FFD700;
+    cursor: pointer;
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
