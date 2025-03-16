@@ -1,29 +1,4 @@
 // lpre loader
-// ===============================================================
-// Array of "Hello" in different languages
-// const greetings = [
-//     "Hello",
-//     "नमस्ते",
-//     "Bonjour",
-//     "Hola",
-//     "Ciao",
-//     "こんにちは",
-//     "안녕하세요",
-//     "Привет",
-//     "Olá",
-//     "Hallo",
-//     "你好",
-//     "こんにちは",
-//     "Merhaba",
-//     "Salam",
-//     "Shalom",
-//     "Jambo",
-//     "Zdravstvuyte",
-//     "Selamat",
-//     "Guten Tag",
-//     "Annyeong"
-
-// ];
 
 const greetings = [
     "Hello", // English
