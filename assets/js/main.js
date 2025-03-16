@@ -45,30 +45,32 @@ window.addEventListener('load', () => {
     }, 2000);
 });
 
+
 // Hamburger Menu Toggle
+// ========================================================================================
 const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links ul');
+const navLink = document.querySelector('.nav-links ul');
 
 // Toggle mobile menu open/close
 mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLink.classList.toggle('active');
     mobileMenu.classList.toggle('is-active');
 });
 
 // Optional: Close menu when a link is clicked (better UX)
-navLinks.querySelectorAll('li').forEach(link => {
+navLink.querySelectorAll('li').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navLink.classList.remove('active');
         mobileMenu.classList.remove('is-active');
     });
 });
 
 
+// Smooth Scroll Effect for Navbar Links with Page Load Support
+// =========================================================================================================
 
-// Smooth Scroll Effect for Navbar Links
-// ========================================================
 // Select all navbar links and sections
-const navLink = document.querySelectorAll(".nav-links li");
+const navLinks = document.querySelectorAll(".nav-links li");
 const sections = document.querySelectorAll("section");
 
 // Function to highlight the active link
@@ -77,16 +79,16 @@ function highlightActiveLink() {
 
     // Find which section is currently in view
     sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - 100; // Adjust for navbar height
         const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             currentSection = section.getAttribute("id");
         }
     });
 
     // Loop through each link and apply/remove 'active' class
-    navLink.forEach((link) => {
+    navLinks.forEach((link) => {
         const anchor = link.querySelector("a");
         link.classList.remove("active");
 
@@ -96,8 +98,36 @@ function highlightActiveLink() {
     });
 }
 
-// Run on scroll and on page load
+// Smooth scroll behavior for clicking on nav links
+navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.querySelector("a").getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop - 80,
+            behavior: "smooth"
+        });
+    });
+});
+
+// Ensure the active link is highlighted on scroll and on page load
 window.addEventListener("scroll", highlightActiveLink);
-window.addEventListener("load", highlightActiveLink);
+window.addEventListener("load", () => {
+    highlightActiveLink();
+
+    // Smooth scroll to the section if loaded with a hash
+    if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: "smooth"
+            });
+        }
+    }
+});
+
 
 
