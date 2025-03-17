@@ -32,7 +32,7 @@ h4, h5, h6 {
 /* Paragraphs and content */
 p {
     font-family     :'Public Sans','Open Sans', sans-serif;
-    font-weight     : 300;
+    font-weight     : 400;
 }
 
 /* Add a little spacing to make things breathe */
@@ -65,6 +65,12 @@ section {
     margin  : 20px 0;
 }
 
+
+/* Ensure WOW animations apply ONLY to elements with 'wow' 
+========================================================== */
+.wow {
+    visibility: hidden; /* Hide before animation starts */
+}
 
 /* Preloader container
 ================================== */
@@ -132,7 +138,7 @@ section {
     margin-left         : 150px;
     padding             : 15px 0px;
     text-decoration     : none;
-    letter-spacing      : 1.5px;
+    letter-spacing      : 1.8px;
 } 
 
 
@@ -279,8 +285,6 @@ section {
 section {
     height: 100vh;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     color: #fff;
     font-size: 36px;
     font-weight: bold;
@@ -290,21 +294,25 @@ section {
 /* Add different background colors per section */
 #home {
     margin: 0;
-            height: 100vh;
-            background-color: #000;
-            display: flex;
-            /* align-items: center;
-            justify-content: center; */
-            overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    overflow: hidden;
+/*  align-items: center;
+    justify-content: center; */
             
 }
 
 #about {
-    background: rgb(68, 0, 255);
+    background: rgb(0, 0, 0);
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 130px;
+    display: block;
 }
 
 #skills {
-    background: rgb(255, 0, 0);
+    background: rgb(0, 0, 0);
 }
 
 
@@ -368,7 +376,7 @@ section {
         opacity: 0.8;
     }
     100% {
-        opacity: 0.04; 
+        opacity: 0.05; 
     }
 }
 
@@ -399,7 +407,6 @@ section {
         
     }
 }
-
 
 
 /* Stagger the opacity per circle */
@@ -434,27 +441,7 @@ section {
  .hero-column{
     margin-top: 190px;
     margin-left: 90px;
-
-    /* Animation setup */
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: slideInLeft 5s ease-in-out forwards;
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    mid {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+ }
 
  .text-pretitle {
     font-family    : var(--font-1);
@@ -500,9 +487,10 @@ section {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .hero-column {
-        margin-top: 100px;
-        margin-left: 20px;
-        text-align: center;
+        margin-top: 167px;
+        margin-left: 91px;
+        text-align: left;
+        
     }
 
     .text-pretitle {
@@ -521,15 +509,15 @@ section {
     }
 
     .text-huge-title {
-        font-size: 40px;
-        line-height: 1.2;
+        font-size: 60px;
+        line-height: 1.7;
     }
 }
 
 @media (max-width: 480px){
 
     .hero-column{
-        margin-top: 170px;
+        margin-top: 100px;
         margin-left: 0px;
         padding: 29px;
         text-align: left;
@@ -626,8 +614,8 @@ section {
         padding: 0;
         left: 50%;
         transform: translateX(-50%) rotate(0deg); /* Make it horizontal */
-        position: fixed;
-        bottom: 10px; /* Stick to bottom */
+        position: absolute;
+        bottom: 100px; 
         margin-top: 0;
         justify-content: center;
     }
@@ -644,10 +632,137 @@ section {
 @media (max-width: 480px) {
     .intro-social {
         font-size: 7px; 
-        bottom: 180px;
+        bottom: 100px;
     }
 
     .intro-social li {
         padding: 0 0.4rem;
     }
 }
+
+
+/*====================================================
+ ABOUT PAGE
+====================================================== */
+
+/* about me 
+============================================================= */
+.about-info {
+    display     : flex;
+    width       : 100%;
+    align-items : center;
+}
+
+.about-info__pic {
+    object-fit     : cover;
+    margin-left    : 50px;
+    vertical-align : bottom;
+    width: auto;
+    height: 550px;
+    box-shadow: 
+    2px 2px 1px #FFD700,
+    -2px -2px 1px #FF00E1;
+    z-index: 1;
+}
+
+.about-info__text {
+    padding     : 0 2rem;
+    margin-left : 2rem;
+    margin-top: 0rem;
+    z-index: 200;
+    /* background-color: rgba(231, 8, 8, 0.666); */
+}
+
+.about-info__text .text-pretitle {
+    margin-bottom : 10px
+}
+
+.about-info__text .btn {
+    text-align: center;
+    width           : 400px;
+    margin-top      : 25px;
+    padding         : 16px 20px; 
+    transition      : all 0.3s ease;
+    border-radius   : 1px;
+    text-decoration: none;
+    background: #2c2c2d;
+    border: 1px solid #2c2c2d;
+    cursor: pointer;
+    color: #FFD700;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.about-info__text .btn:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+
+
+/* Mobile responsiveness 
+===============================================================*/
+@media (max-width: 480px) {
+
+    .about-info {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .about-info__pic {
+        width: 70%;
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Smaller height for mobile */
+    }
+
+    .about-info__text {
+        padding: 1.5rem;
+        overflow: scroll;
+        margin-top: 12px;
+        margin-left: 20px;
+    }
+
+    .about-info__text .btn {
+        width: auto;
+        padding: 10px 14px;
+        font-size: 10px;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+}
+
+
+/*  ====================================================================
+ about expertise
+========================================================================= */
+
+ .about-expertise {
+    width: auto;
+    margin: 50px;
+    margin-top: 180px;
+    /* background-color: blue; */
+}
+
+.about-expertise .skills-list {
+    list-style  : none;
+    margin-left : 0;
+}
+
+.about-expertise .skills-list li {
+    display      : inline-block;
+    padding-left : 0;
+    font-family: 'DM Serif Display';
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+}
+
+.about-expertise .skills-list li:hover {
+    color: #FFD700;
+    cursor: pointer;
+}
+.about-expertise .skills-list li:not(:last-child)::after {
+    content : ", ";
+}
+

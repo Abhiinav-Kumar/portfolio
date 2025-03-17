@@ -1,4 +1,5 @@
-// lpre loader
+//pre loader
+// =====================================================================
 
 const greetings = [
     "Hello", // English
@@ -128,6 +129,9 @@ window.addEventListener("load", () => {
         }
     }
 });
+
+
+
 
 
 

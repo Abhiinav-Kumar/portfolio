@@ -9,6 +9,9 @@
     ================================================== -->
     <link rel="stylesheet" href="assets/css/styles.css">
     
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
     <!-- FONTS 
      =================================================== -->
@@ -47,7 +50,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <!-- <li><a href="#skills">Skills</a></li> -->
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Say Hello</a></li>
             </ul>
@@ -63,6 +66,7 @@
     <!-- Header Ending -->
 
     
+    <!-- Home Page  -->
     <section id="home">
         <div class="spider-web" >
             <svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
@@ -90,13 +94,14 @@
             </svg>
         </div>
 
-        <div class="hero-column">
+        <div class="hero-column wow animate__fadeInLeft" data-wow-delay="3s">
             <div class="text-pretitle with-line">
                 Designing the Future, One Pixel at a Time.
             </div>
 
             <h1 class="text-huge-title">
-               <span> Hi,</span> I'm Abhinav, <br>
+               <!-- <span> Hi,</span>  -->
+               I'm Abhinav, <br>
                 a Python & Web Developer, <br>
                 crafting code <br>
                 with creativity, <br>
@@ -108,17 +113,71 @@
                 <li><a href="https://github.com/Abhiinav-Kumar" target="_blank">GitHub</a></li>
                 <li><a href="www.linkedin.com/in/abhinav-kumar-p-a-27b23b304" target="_blank">Linkedin</a></li>
                 <li><a href="https://www.behance.net/abhinavkumar245" target="_blank">Behance</a></li>
-                <li><a href="https://www.instagram.com/abhiinav_?igsh=OXRpMGV6MmRrMHB2" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
             </ul>
         </div>
     </section>
-    
+    <!-- Home Page Ending -->
+
+    <!-- About Page  -->
     <section id="about">
-        <h2>About Me</h2>
+        <div class="about-info" >
+            <div class="about-info__pic-block wow animate__fadeInUp" data-wow-delay="0.5s">
+                <img src="/assets/images/hero.jpg" alt="Abhinav Kumar P A" class="about-info__pic" >
+            </div>
+
+                <div class="about-info__text wow animate__fadeInUp" data-wow-delay="0.5s">
+                    <h2 class="text-pretitle with-line" >
+                        About Me
+                    </h2>
+                    <p class="wow animate__fadeInUp" data-wow-delay="0.7s" >
+                        Hi, I’m Abhinav Kumar P A - an enthusiastic and dedicated software developer with a strong passion for building efficient, user-friendly web applications. With proficiency in Python, Django, React, and MySQL, I specialize in creating dynamic, real-time communication features, such as chat applications, using Django Channels and WebSockets. <br> <br>
+
+                        My journey began with a BSc in Botany, but my curiosity for technology led me to pursue web development, data analysis, and cloud technologies like AWS. This unique blend of science and technology fuels my problem-solving mindset, helping me approach challenges creatively. <br><br>
+
+                        In addition to my technical skills, I continuously work on strengthening my communication, teamwork, and leadership abilities — recognizing that these are as essential to success as code. My goal is to grow as a developer, dive into emerging technologies like machine learning and game development, where I can contribute to cutting-edge innovations. <br><br>
+
+                        Driven by resilience and a passion for learning, I believe no challenge is too big — just another opportunity to grow. <br>
+                    </p>
+                    <a href="#0" class="btn wow animate__fadeInUp" data-wow-delay="0.5s">Download CV</a>
+                </div>
+        </div> 
+        <!-- about-info End -->
+
+        <!-- about-expertise  -->
+        <div class="about-expertise wow animate__fadeInUp" data-wow-delay="0.5s" >
+
+                <h2 class="text-pretitle with-line " >Skills</h2>
+
+                <ul class="skills-list wow animate__fadeInUp" data-wow-delay="0.6s" >
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>Css</li>
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>MySQL</li>
+                    <li>SQLite</li>
+                    <li>AWS</li>
+                    <li>Git</li>
+                    <li>Bootsrap</li>
+                    <li>REST API Development</li>
+                    <li>Numpy</li>
+                    <li>Pandas</li>
+                    <li>jQuery</li>
+                    <li>Problem-Solving & Debugging</li>
+                    <li>Agile Collaboration & Teamwork</li>
+                    <li>creativity</li>
+                    <li>Adaptability</li>
+                    
+
+                </ul>
+        </div> 
+        <!-- end about-expertise -->
     </section>
-    <section id="skills">
-        <h2>Skills</h2>
-    </section>
+        <!-- About Page Ending  -->
     
     <section id="projects">
         <h2>Projects</h2>
@@ -138,6 +197,21 @@
     <!-- JAVA SCRIPT 
      ============================== -->
      <script src="assets/js/main.js"></script>
+
+     <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        // Initialize WOW.js with custom settings
+new WOW({
+    boxClass: 'wow', // Default class for the animation
+    animateClass: 'animate__animated', // Animate.css class prefix
+    offset: 0, // Distance to trigger animation (0 means right when visible)
+    mobile: true, // Enable on mobile
+    live: true // Check for new elements dynamically
+}).init();
+
+    </script>
 
 </body>
 </html>
