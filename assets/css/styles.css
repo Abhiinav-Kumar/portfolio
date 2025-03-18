@@ -7,6 +7,16 @@
     box-sizing  : border-box;
 }
 
+/* root 
+==================================== */
+:root {
+    --timeline-top-adjust: 18px;
+}
+
+:root {
+    --item-height: 150px; 
+}
+
 /* Body styling with a smooth font setup
 =========================================== */
 body {
@@ -251,13 +261,12 @@ section {
     display: block;
 }
 
-#skills {
-    background: rgb(0, 0, 0);
-}
-
 
 #projects {
-    background: linear-gradient(135deg, #000428, #004e92);
+    /* background: rgb(2, 243, 167); */
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 130px;
 }
 
 #contact {
@@ -591,7 +600,7 @@ section {
  .about-timelines{
     padding-top  : 20px;
     padding-left: 80px;
-    margin-top: 80px;
+    margin-top: 120px;
     width: 100%;
     justify-content: space-evenly;
     display: flex;
@@ -635,10 +644,6 @@ section {
     left             : 3.5px;
 }
 
-
-:root {
-    --timeline-top-adjust: 18px;
-}
 
 
 .timeline__block {
@@ -698,3 +703,230 @@ section {
     font-family    : 'Public Sans','Open Sans', sans-serif;
     font-size      : 19px;
 }
+
+
+
+/* --------------------------------------------------------------------
+ * ## works portfolio
+ * -------------------------------------------------------------------- */
+
+ .projects-title{
+    margin-top: -100px;
+    /* background-color: darkblue; */
+    padding-left: 90px;
+    margin-bottom: 40px;
+   
+ }
+
+ .projects-title p{
+    font-family     : 'DM Serif Display','Playfair Display';
+    font-weight     : 400;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+    font-size: 44px;
+ }
+
+.folio-list {
+    list-style: none;
+    margin-left: 140px;
+    margin-right: 140px;
+    /* background-color: red; */
+    display: flex; /* Changed to flex for row layout */
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    gap: 35px; /* Adds space between items */
+    padding: 0;
+}
+
+.folio-list__item {
+    position: relative;
+    /* background-color: blue; */
+    height: var(--item-height);
+    width: calc(50% - 35px); /* Each item takes half the width minus gap compensation */
+    box-sizing: border-box; /* Ensures padding and border don't affect width */
+}
+
+
+.folio-list__item-link {
+    display             : block;
+    width               : 100%;
+    /* padding-left        : calc(5.5 * var(--space)); */
+    color               : white;
+    transition-duration : .5s;
+    position            : relative;
+    text-decoration: none;
+}
+
+.folio-list__item-pic {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Ensure the container itself has a fixed size */
+    height: 150px;
+    overflow: hidden; /* Prevents any image overflow */
+    /* background-color: blueviolet; */
+}
+
+.folio-list__item-pic img {
+    width: 100%; /* Stretch to fit container */
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    margin: 0;
+    display: block; /* Prevents any unwanted extra space under the image */
+}
+
+.folio-list__item-text {
+    padding-top: 30px;
+    border-top  : 1px solid rgb(255, 255, 255,0.1);
+    min-height  : var(--item-height);
+    position    : relative;
+    /* background-color: chartreuse; */
+    margin-left: 180px;
+   
+}
+
+
+.folio-list__item-link:focus,
+.folio-list__item-link:hover {
+    color:rgb(255, 215, 0);
+    outline: 0;
+}
+
+
+/* Handle hover & focus effects on the image overlay */
+.folio-list__item-link:focus .folio-list__item-pic::before,
+.folio-list__item-link:hover .folio-list__item-pic::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Scale the "+" smoothly on hover */
+.folio-list__item-link:focus .folio-list__item-pic::after,
+.folio-list__item-link:hover .folio-list__item-pic::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Expand the text underline effect smoothly */
+.folio-list__item-link:focus .folio-list__item-text::before,
+.folio-list__item-link:hover .folio-list__item-text::before {
+    width: 100%;
+}
+
+/* Transition settings for smooth animation */
+.folio-list__item-pic::before,
+.folio-list__item-pic::after {
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Overlay fade effect */
+.folio-list__item-pic::before {
+    z-index: 1;
+    content: "";
+    display: block;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* "+" symbol effect (fixed positioning and scaling) */
+.folio-list__item-pic::after {
+    z-index: 2;
+    display: block;
+    content: "+"; 
+    font-family: 'Public Sans','Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+    width: 60px; /* Adjusted size */
+    height: 60px;
+    line-height: 60px; /* Centering the "+" */
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2); /* Centering trick */
+}
+
+/* Hover effect reveals "+" smoothly */
+.folio-list__item-link:focus .folio-list__item-pic::after,
+.folio-list__item-link:hover .folio-list__item-pic::after {
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+
+.folio-list__item-text::before,
+.folio-list__item-title,
+.folio-list__item-cat {
+    transition : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+.folio-list__item-text::before {
+    content          : "";
+    display          : block;
+    width            : 0;
+    height           : 1px;
+    background-color : #FFD700;
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+}
+
+
+
+.folio-list__item-title {
+    font-family : 'Public Sans','Open Sans', sans-serif;
+    font-weight : 500;
+    font-size   : 27px;
+    
+}
+
+.folio-list__item-cat {
+    font-size   : 15px;
+    color       : #5B5B5C;
+    line-height : 15px;
+    margin-left : .2rem;
+}
+
+
+.folio-list__proj-link {
+    display  : block;
+    height   : var(--vspace-1);
+    width    : var(--vspace-1);
+    position : absolute;
+    top      : .8rem;
+    right    : 5px;
+}
+
+.folio-list__proj-link svg {
+    height    : var(--vspace-0_5);
+    width     : var(--vspace-0_5);
+    transform : translate(-50%, -50%) rotate(-45deg);
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+}
+
+.folio-list__proj-link svg path {
+    fill : white;
+}
+
+.folio-list__proj-link:hover {
+    transform : scale(1.2);
+}
+
+
