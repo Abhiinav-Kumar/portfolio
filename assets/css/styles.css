@@ -728,7 +728,7 @@ section {
 
 .folio-list {
     list-style: none;
-    margin-left: 140px;
+    margin-left: 170px;
     margin-right: 140px;
     /* background-color: red; */
     display: flex; /* Changed to flex for row layout */
