@@ -28,24 +28,48 @@
         width: 100dvw;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        /* background-color: yellow; */
+        box-sizing: border-box;
+        overflow-x: hidden;
+        
+        
+    }
+
+    section {
+        width: 98%;
+        margin: 0;
+        padding: 0;
     }
 
     /* navbar 
     ------------------------------------------ */
+    .navbar {
+        display             : flex;
+        justify-content     : space-between;
+        align-items         : center;
+        padding             : 0 20px;
+        background-color    :rgb(0, 0, 0);
+        border-bottom       : 1px solid #333;
+        height              : 60px;
+        position            : sticky;
+        width               : 100%;    
+        z-index             : 1000;
+        top                 : 0px;
+        text-transform      : uppercase;
+        font-family         : 'Public Sans','Open Sans', sans-serif;
+    }
 
     .nav-links ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
         background: rgba(0, 0, 0, 0.9);
         width: 100%;
         text-align: center;
         padding: 10px 0;
         margin-right: 0px;
+    
     }
 
     .nav-links ul.active {
@@ -80,13 +104,23 @@
     /* home page 
     ----------------------------------------------- */
 
+    #home {
+        margin: 0;
+        display: flex;
+        overflow: hidden;
+        width: 100%;  
+        height: 100vh;        
+    }
+    
     .hero-column{
-        margin-top: 100px;
+        margin-top: 40px;
         margin-left: 0px;
         padding: 29px;
         text-align: left;
+        height: 200px;
 
     }
+
 
     .text-pretitle {
         font-size: 12px;
@@ -94,8 +128,8 @@
     }
 
     .text-huge-title {
-        font-size: 38px;
-        line-height: 1.5;
+        font-size: 45px;
+        line-height: 1.8;
     }
 
 
@@ -104,7 +138,7 @@
         left: 40%;
         transform: translateX(-50%) rotate(0deg); 
         position: absolute;
-        bottom: 70px; 
+        bottom: 40px; 
         margin: 10px;
         justify-content: center;
         width: 70%;
@@ -169,7 +203,7 @@
         padding: 0;
         margin: 0;
         list-style: none; 
-        line-height: 0.8;
+        line-height: 1.rem;
         padding-top: 10px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -179,7 +213,7 @@
         display      : inline;
         padding: 0;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-family: serif; 
         letter-spacing: 0.5px;
         font-family     :'Public Sans','Open Sans', sans-serif;
@@ -228,7 +262,7 @@
         padding: 0px;
         padding-left: 30px;
         padding-right: 20px;
-        margin-top: -200px;
+        margin-top: -90px;
     }
 
     .projects-title p{
@@ -374,7 +408,7 @@
         text-align: center;
         width: 200px;
         margin-top: 40px;
-        margin-left: 90px;
+        margin-left: 27%;
         padding: 6px 2px;
         transition: all 0.3s ease;
         border-radius: 1px;
