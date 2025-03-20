@@ -153,4 +153,42 @@
         font-size: 17px;
         margin-top: 45px;
     }
+
+    .about-timelines {
+        padding-top: 20px;
+        padding-left: 74px;
+        margin-top: 120px;
+        width: 100%;
+        justify-content: space-evenly;
+        display: block;
+    }
+
+    .timeline__desc {
+        margin-top: 18px;
+        margin-bottom: 18px;
+        color: #A1A1A2;
+        font-family: 'Public Sans', 'Open Sans', sans-serif;
+        font-size: 19px;
+        margin-right: 260px;
+        text-overflow: wrap;
+    }
+
+    
+    .education-box {
+    width: 600px;
+    margin-left: -76px;
+    }
+
+    .timeline__block {
+        padding-left: 10px;
+        position: relative;
+    }
+
+    .timeline__meta {
+        font-family: 'Public Sans', 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 21px;
+        margin-top: -2px;
+        word-wrap: break-word;
+    }
 } 
