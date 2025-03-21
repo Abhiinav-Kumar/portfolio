@@ -84,7 +84,7 @@ section {
 /* Ensure WOW animations apply ONLY to elements with 'wow' 
 ========================================================== */
 .wow {
-    visibility: hidden; /* Hide before animation starts */
+    visibility: hidden; 
 }
 
 /* Preloader container
@@ -280,6 +280,8 @@ section {
     border-bottom: none;
     /* padding-bottom: 200px; */
 }
+
+
 
 /*====================================================
  HOME PAGE 
@@ -532,7 +534,7 @@ section {
     margin-left : 2rem;
     margin-top: 0rem;
     z-index: 200;
-    /* background-color: rgba(231, 8, 8, 0.666); */
+    
 }
 
 .about-info__text .text-pretitle {
@@ -572,7 +574,7 @@ section {
     width: auto;
     margin: 70px;
     margin-top: 180px;
-    /* background-color: blue; */
+   
 }
 
 .about-expertise .skills-list {
@@ -713,7 +715,6 @@ section {
 
  .projects-title{
     margin-top: -100px;
-    /* background-color: darkblue; */
     padding-left: 90px;
     margin-bottom: 40px;
    
@@ -731,16 +732,14 @@ section {
     list-style: none;
     margin-left: 170px;
     margin-right: 140px;
-    /* background-color: red; */
-    display: flex; /* Changed to flex for row layout */
-    flex-wrap: wrap; /* Allows items to wrap if needed */
-    gap: 35px; /* Adds space between items */
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 35px; 
     padding: 0;
 }
 
 .folio-list__item {
     position: relative;
-    /* background-color: blue; */
     height: var(--item-height);
     width: calc(50% - 35px); /* Each item takes half the width minus gap compensation */
     box-sizing: border-box; /* Ensures padding and border don't affect width */
@@ -750,7 +749,6 @@ section {
 .folio-list__item-link {
     display             : block;
     width               : 100%;
-    /* padding-left        : calc(5.5 * var(--space)); */
     color               : white;
     transition-duration : .5s;
     position            : relative;
@@ -762,18 +760,17 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px; /* Ensure the container itself has a fixed size */
+    width: 150px; 
     height: 150px;
-    overflow: hidden; /* Prevents any image overflow */
-    /* background-color: blueviolet; */
+    overflow: hidden; 
 }
 
 .folio-list__item-pic img {
-    width: 100%; /* Stretch to fit container */
+    width: 100%; 
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the area without distortion */
+    object-fit: cover; 
     margin: 0;
-    display: block; /* Prevents any unwanted extra space under the image */
+    display: block; 
 }
 
 .folio-list__item-text {
@@ -781,7 +778,6 @@ section {
     border-top  : 1px solid rgb(255, 255, 255,0.1);
     min-height  : var(--item-height);
     position    : relative;
-    /* background-color: chartreuse; */
     margin-left: 180px;
    
 }
@@ -916,10 +912,10 @@ section {
     z-index: 1000;
     top: 0;
     left: 0;
-    display: flex; /* Center content more cleanly */
+    display: flex; 
     justify-content: center;
     align-items: center;
-    margin-top: 0; /* Removed the margin shift */
+    margin-top: 0; 
     display: none;
 }
 
@@ -998,7 +994,7 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(../images/icons/icon-tag.svg);
+    /* background-image: url(../images/icons/icon-tag.svg); */
     position: absolute;
     left: 0;
     right: 2px;
@@ -1020,6 +1016,7 @@ section {
     display: none;
 }
 
+
 .modal-popup__details {
     background-color: rgb(255, 255, 255,0.2);
     font-size: 0.75rem;
@@ -1027,7 +1024,6 @@ section {
     color: white;
     padding: 7px 10px;
     position: absolute;
-    /* bottom: 263px; */
     top: 20px;
     left: 10px;
     text-decoration: none;
@@ -1045,8 +1041,6 @@ section {
 
 
 
-
-
 /* ===================================================================
  * # CONTACT
  *
@@ -1055,12 +1049,12 @@ section {
 
  .contact-top {
     padding-top : 50px;
-    /* background: #ff0101; */
+
 }
 
 .contact-title{
     margin-left: 197px;
-    /* background: #2200ff; */
+    
 }
 
 .contact-text{
@@ -1077,16 +1071,12 @@ section {
 .contact-bottom {
     padding-bottom : 20px;
     margin-top     : 30px;
-    /* border-bottom  : 1px solid blue; */
-    /* background-color: yellowgreen; */
-    /* margin-left: 100px; */
     display: flex;
     margin-bottom: 50px;
 }
 
 .contact-bottom .text-pretitle {
     margin-bottom : 15px;
-    /* background-color: red; */
     color: white;
 }
 
