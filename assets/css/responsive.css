@@ -465,9 +465,11 @@
     
 }
 
+/* ===================================================================================================
+Tablet Portrait 
+====================================================================================================== */
 
 
-/* Tablet Portrait */
 @media (min-width: 600px) and (max-width: 768px) {
     body{
         width: 100dvw;
@@ -528,5 +530,184 @@
     .nav-links li {
         width: 100%;
         justify-content: center;
+    }
+
+    .hero-name {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 10px;
+        padding: 15px 0px;
+        width: 200px;
+    }
+
+    /* home page 
+    -------------------------------- */
+
+    .hero-column{
+        margin-top: 40px;
+        margin-left: 0px;
+        padding: 50px;
+        text-align: left;
+        height: 200px;
+
+    }
+
+    
+    .text-pretitle {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+    }
+
+    .text-huge-title {
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+
+
+    .intro-social {
+        padding: 0;
+        left: 40%;
+        transform: translateX(-50%) rotate(0deg); 
+        position: absolute;
+        bottom: 40px; 
+        margin: 10px;
+        justify-content: center;
+        width: 70%;
+        padding-left: 16%;
+        
+    }
+
+    .intro-social a{
+        font-size: 0.4rem; 
+    }
+
+    /* about section 
+    -------------------------------------------- */
+
+    .about-info {
+        flex-direction: column;
+        margin-top: -80px; 
+        text-align: left;
+        
+    }
+
+    .about-info__pic {
+        width: 80%;
+        height: auto; 
+        /* margin-left: 35px;
+        max-height: 300px;  */
+        border: 2px black solid;
+    }
+
+    .about-info__text {
+        padding: 1.5rem;
+        overflow: scroll;
+        margin-top: 12px;
+        margin-left: 20px;
+        font-size: 0.60rem;
+    }
+
+    .about-info__text .btn {
+        width: auto;
+        padding: 10px 14px;
+        font-size: 10px;
+        margin-top: 25px;
+        margin-right: 20px;
+    }
+
+    /* experience education
+    ------------------------------------------ */
+    .tab-exp{
+        padding-left: 9rem;
+    }
+
+    /* projects 
+    =--------------------------------- */
+
+    .works-portfolio{
+        display: grid;
+        margin: 0px;
+        padding: 0px;
+        width: 100dvw;
+    }
+
+    .folio-list{
+        display: block;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .folio-list__item{
+        display: block;
+        margin-top: 20px;
+        margin-left: 80px;
+        padding: 0px;
+        width: 90dvw;
+        /* background-color: yellow; */
+    }
+
+    /* modal popup 
+    ------------------------------------ */
+
+    /* pop model 
+    --------------------------------------------------- */
+
+    .bgmodal-popup{
+        display: block;
+        margin-left: 0px;
+        padding: 0px;
+        width: 100dvw;
+        margin-top: 0;
+        display: none;
+        background-color: rgb(0, 0, 0);
+        height: 100dvh;
+        
+    }
+    .modal-popup{
+        display: block;
+        margin-left: 50px;
+        padding: 0px;
+        width: 100dvw;
+        margin-top: 0px;
+        min-height: 100dvh;
+        overflow-x: scroll;
+    }
+
+    .modal-close{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0px;
+        z-index: 1000;
+    }
+
+    .pro-img img{
+        width: 100%; 
+        min-height: 250px;
+        object-fit: fill;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-close i{
+        color: rgb(255, 255, 255);
+    }
+
+    /* contact 
+    ----------------------------------------------- */
+    .contact-bottom{
+        /* background-color: green; */
+        display: block;
+        height: fit-content;
+
+    }
+
+    .tab-con{
+        margin-top: 13px;
+    }
+
+    .contact-btn {
+        text-align: center;
+        width: 500px;
+        margin-top: 70px;
     }
 }
