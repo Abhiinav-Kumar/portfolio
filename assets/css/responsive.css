@@ -595,6 +595,9 @@ Tablet Portrait
         width: 80%;
         height: auto; 
         border: 2px black solid;
+        margin-left: min(10vw, 80px);
+        
+        
     }
 
     .about-info__text {
