@@ -465,6 +465,7 @@
     
 }
 
+
 /* ===================================================================================================
 Tablet Portrait 
 ====================================================================================================== */
@@ -595,8 +596,6 @@ Tablet Portrait
     .about-info__pic {
         width: 80%;
         height: auto; 
-        /* margin-left: 35px;
-        max-height: 300px;  */
         border: 2px black solid;
     }
 
@@ -644,7 +643,6 @@ Tablet Portrait
         margin-left: 80px;
         padding: 0px;
         width: 90dvw;
-        /* background-color: yellow; */
     }
 
     /* modal popup 
@@ -695,7 +693,6 @@ Tablet Portrait
     /* contact 
     ----------------------------------------------- */
     .contact-bottom{
-        /* background-color: green; */
         display: block;
         height: fit-content;
 
