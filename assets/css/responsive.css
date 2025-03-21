@@ -62,7 +62,7 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 60px;
         right: 0;
         background: rgba(0, 0, 0, 0.9);
         width: 100%;
@@ -262,7 +262,8 @@
         padding: 0px;
         padding-left: 30px;
         padding-right: 20px;
-        margin-top: -90px;
+        margin-top: -160px;
+
     }
 
     .projects-title p{
@@ -324,17 +325,32 @@
         z-index: 1000;
     }
 
+    .pro-img img{
+        width: 100%; 
+        min-height: 250px;
+        object-fit: fill;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    }
+
     .modal-close i{
         color: rgb(0, 0, 0);
     }
 
     /* contact 
     ----------------------------------------------------------- */
+    #contact {
+
+        display: block;
+        height: 90dvh;
+        border-bottom: none;
+        
+    }
+    
     .contact-top{
         margin-left: 0px;
         padding: 0px;
         width: 100dvw;
-        margin-top: 0px;
+        margin-top: 70px;
         padding-top: 20px;
     }
     .contact-title{
@@ -348,7 +364,7 @@
         padding-left: 23px;
         width: 100dvw;
         margin-top: 0px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding-top: 20px;
         font-family: 'Public Sans', 'Open Sans', sans-serif;
     }
@@ -358,7 +374,7 @@
         margin-left: 0px;
         padding: 0px;
         width: 100dvw;
-        margin-top: 0px;
+        margin-top: 40px;
         padding-top: 20px;
         /* background-color: red; */
     }
@@ -407,7 +423,7 @@
     .contact-btn {
         text-align: center;
         width: 200px;
-        margin-top: 40px;
+        margin-top: 70px;
         margin-left: 27%;
         padding: 6px 2px;
         transition: all 0.3s ease;
@@ -427,9 +443,15 @@
 
     /* footer 
     ------------------------------------------------------------- */
+    .footer-row{
+        width: 100%;
+        padding-left: 90px;
+        border-top:1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 180px;
+       
+    }
 
     .ss-copyright h6 {
-
         font-size : 8px;
         color   : rgba(255, 255, 255, 0.2);
         font-family:   'Public Sans','Open Sans', sans-serif;
