@@ -150,3 +150,10 @@ document.querySelectorAll('.modal-close').forEach(closeBtn => {
         modal.style.display = 'none';
     });
 });
+
+
+
+// ================================
+//    🚀 Built by Abhinav Kumar P A  
+//    ✨ Portfolio Project | 2025  
+// ================================
