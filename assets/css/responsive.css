@@ -294,8 +294,10 @@
         display: block;
         margin-top: 20px;
         margin-left: 15px;
+        margin-right: 8px;
         padding: 0px;
-        width: 100dvw;
+        width: auto;
+        background-color: aqua;
     }
 
     /* pop model 
@@ -647,6 +649,7 @@ Tablet Portrait
         margin-left: 80px;
         padding: 0px;
         width: 80dvw;
+        
         
     }
 
