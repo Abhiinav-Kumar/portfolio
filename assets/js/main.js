@@ -10,24 +10,22 @@
 
 const greetings = [
     "Hello", // English
-    "ഹലോ" , // Malayalam
     "नमस्ते" , // Hindi
-    "வணக்கம்" , // Tamil
-    "নমস্কার" , // Bengali
-    "నమస్కారం" , // Telugu
-    "ನಮಸ್ಕಾರ" , // Kannada
-    "नमस्कार" , // Marathi
-    "ਸਤ ਸ੍ਰੀ ਅਕਾਲ" , // Punjabi
-    "નમસ્તે" , // Gujarati
-    "ନମସ୍କାର" , // Odia
-    "नमस्कार" , // Sanskrit
-    "ஹலோ" , // Tamil (alternative)
-    "খোদা হাফেজ" , // Assamese
-    "जय जिनेंद्र" , // Jain (Hindi dialect)
-    "राम राम" , // Rajasthani
-    "खम्मा घणी" , // Marwari
-    "আদাব" , // Urdu (Bengal dialect)
-    "ସୁନ୍ଦର ଦିନ" , // Odia (alternative)
+    "Hola", // Spanish
+    "Bonjour", // French
+    "Ciao", // Italian
+    "Hallo", // German
+    "Olá", // Portuguese
+    "Привет", // Russian
+    "你好", // Chinese (Mandarin)
+    "こんにちは", // Japanese
+    "ഹലോ" , // Malayalam
+     "नमस्ते", // Hindi
+    "வணக்கம்", // Tamil
+    "নমস্কার", // Bengali
+    "నమస్కారం", // Telugu
+    "ನಮಸ್ಕಾರ", // Kannada
+    "नमस्कार", // Marathi
 
 ];
 
