@@ -188,7 +188,6 @@
     top: 0;
     width: 4px;     /* border thickness */
     height: 0;      /* animation start */
-    background: white;
     transition: height 0.5s ease;
 }
 
@@ -200,19 +199,16 @@
     bottom: 0;
     width: 0;      /* animation start */
     height: 4px;   /* border thickness */
-    background: white;
     transition: width 0.5s ease;
 }
 
 /* HOVER → animate border loading */
 .img-box:hover::before {
     height: auto;     /* exact image height */
-    background: #FFD700;
 }
 
 .img-box:hover::after {
     width: auto;      /* exact image width */
-    background: #FFD700;
 }
 
     .about-info__text {
