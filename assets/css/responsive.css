@@ -175,6 +175,46 @@
         border: 2px black solid;
     }
 
+.img-box {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img-box::before {
+    content: "";
+    position: absolute;
+    left: 100px;  /* same as image margin-left */
+    top: 0;
+    width: 4px;     /* border thickness */
+    height: 0;      /* animation start */
+    background: white;
+    transition: height 0.5s ease;
+}
+
+/* BOTTOM border line (horizontal) */
+.img-box::after {
+    content: "";
+    position: absolute;
+    left: 100px;  /* align with image */
+    bottom: 0;
+    width: 0;      /* animation start */
+    height: 4px;   /* border thickness */
+    background: white;
+    transition: width 0.5s ease;
+}
+
+/* HOVER → animate border loading */
+.img-box:hover::before {
+    height: auto;     /* exact image height */
+    background: #FFD700;
+}
+
+.img-box:hover::after {
+    width: auto;      /* exact image width */
+    background: #FFD700;
+}
+
     .about-info__text {
         padding: 1.5rem;
         overflow: scroll;
